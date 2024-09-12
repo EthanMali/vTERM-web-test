@@ -1,8 +1,18 @@
+/*Custom font inport*/
+@font-face {
+    font-family: 'CustomFont'; /* The name you will use to refer to the font */
+    src: url('fonts/kimberley.otf') format('woff2'), /* Path to the font file */;
+    font-weight: lighter; /* Optional: Set the font weight */
+    font-style: normal; /* Optional: Set the font style */
+}
+
+
 /* Body styles */
 body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'CustomFont', sans-serif; /* Use the custom font with a fallback */
 }
 
 body {
@@ -17,64 +27,62 @@ body {
     height: 1px;
     background-color: #000;
 }
-.hero{
+
+.hero {
     color: #000000;
-    
 }
 
 /* nav Container */
 .nav-container {
-    width: 90%;
+    width: 95%;
     margin: auto;
-    display: flexbox;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 60px;
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+/* Logo */
+.logo { 
+    scale: 2;
+    max-height: 60px; /* Adjust as needed */
+    margin-bottom: 15px;
     height: auto;
-}
-
-/* nav Container */
-.nav-container {
-    width: 90%;
-    margin: auto;
-    display: flex; /* Fix typo here */
-    align-items: center;
-    justify-content: space-between;
-    height: auto; /* Adjust if needed */
-    padding: 10px 0; /* Reduce padding if needed */
 }
 
 /* Header */
 header {
     background-color: #ffffff;
     color: #000000;
-    padding: 10px 0; /* Adjust padding for thinner navbar */
+    padding: 10px 0;
+    font-family: CustomFont;
 }
 
 
-/* Logo */
-.logo {
-    transform: scale(0.4); /* Scales the image to 40% of its original size */
-}
 
-/* navigation */
+/* ----------------------------------------------------------------- Navbar */
 nav {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .navbar {
     display: flex;
     gap: 20px;
+    align-items: center; 
 }
 
 .navbar a {
     color: #000000;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 16px; /* Added padding for better clickability */
 }
 
-/* Hover effect */
+
 .hoverItem {
     padding: 8px;
     border-radius: 5px;
@@ -84,43 +92,59 @@ nav {
     background-color: rgba(0, 0, 0, 0.151);
 }
 
-/* Get Started Button */
+/* -----------------------------------------------------------Buttons */
 .get_started_button {
     padding: 10px 20px;
-    background-color: #0000004e;
-    color: #ffffff;
+    background-color: #00000000;
+    color: #000000;
     text-decoration: none;
     border-radius: 5px;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     display: inline-flex; /* Align text and icon */
     align-items: center; /* Center items vertically */
     transition: transform 0.3s;
+    margin-left: -80px;
 }
 
 .get_started_button i {
-    margin-left: 8px; /* Space between text and icon */
-    transition: transform 0.3s; /* Smooth animation */
-
+    margin-left: 8px;
+    transition: transform 0.3s;
 }
 
 .get_started_button:hover {
     transform: translateX(5px);
-    
 }
 
 .get_started_button:hover i {
-    transform: translateX(5px); /* Arrow move on hover */
-
+    transform: translateX(5px);
+}
+/* Basic button styles */
+.learn_more_btn {
+    padding: 5px 15px;
+    background-color: #00000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    display: inline-block; /* Ensure it respects padding and scale */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    margin: 20px;
 }
 
-/*hero conntent*/
+/* Scale effect on hover */
+.learn_more_btn:hover {
+    transform: scale(1.1); /* Scale up by 10% */
+    background-color: #33333399; /* Optional: change background color on hover */
+}
+
+/* --------------------------------------------------------- Hero Content */
 #hero {
     position: relative;
     color: #fff;
     text-align: center;
-    background-color: #333;
+    background-color: #33333367;
     padding: 60px 20px;
-    background-image: url('src/hero/hero.png');
+    background-image: url('src/hero/hero_blured.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,8 +154,8 @@ nav {
     position: relative;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    background: rgba(96, 96, 96, 0.71);
+    padding: 80px;
+    background: rgba(96, 96, 96, 0);
     border-radius: 8px;
 }
 
@@ -144,9 +168,8 @@ nav {
     margin-bottom: 20px;
 }
 
-
- /*hero_Button*/
- .hero_button {
+/* Hero Button */
+.hero_button {
     padding: 10px 20px;
     background-color: #000000;
     color: #ffffff;
@@ -160,18 +183,17 @@ nav {
     color: #000000;
 }
 
-
-/* Features Section */
+/* ------------------------------------- -------------Features Section */
 #features {
     background-color: #ffffff;
-    color: black    ;
+    color: black;
     padding: 40px 20px;
     text-align: center;
 }
 
-.feature-title{
-    padding-bottom: 50px;
+.feature-title {
     font-size: 35px;
+    font-weight: 100;
 }
 
 .feature-grid {
@@ -208,14 +230,15 @@ nav {
     font-size: 18px;
 }
 
-/* How It Works Section */
-#how-it-works {
-    padding: 40px 20px;
+.description {
+    width: 80%;
+    margin: 0 auto; /* Centers horizontally */
     text-align: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
 }
 
-
-/* Testimonials Section */
+/* ------------------------------------------------------------reviews Section */
 #testimonials {
     background-color: #ffffff;
     padding: 40px 20px;
@@ -244,7 +267,15 @@ nav {
     color: #555;
 }
 
-/* Basic Carousel Styles */
+
+/* -----------container for courasel */
+#how-it-works {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------------------ photo slideshow */
 .carousel {
     position: relative;
     overflow: hidden;
@@ -284,4 +315,87 @@ nav {
     right: 15px;
 }
 
+/* ------------------------------------------------------------FAQ Section */
+#faq {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
+#faq .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#faq h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+details {
+    margin-bottom: 10px;
+}
+
+summary {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ffffff50;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-family: CustomFont;
+}
+
+summary:hover {
+    background-color: #ccc;
+}
+
+.p{
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none; /* Removes the top border to make it seamless */
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #333333; /* Dark background color for contrast */
+    color: #ffffff; /* White text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px; /* Center content with max width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 16px; /* Slightly larger text for readability */
+}
+
+footer .socials {
+    margin-top: 10px;
+}
+
+footer .socials a {
+    color: #ffffff; /* White color for icons */
+    margin: 0 10px; /* Spacing between icons */
+    font-size: 24px; /* Larger icons */
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Ensures the transform effect is applied correctly */
+    padding: 8px; /* Adds a clickable area */
+    border-radius: 50%; /* Circular background */
+    background-color: rgba(255, 255, 255, 0); /* Subtle background color for visibility */
+}
+
+footer .socials a:hover {
+    transform: scale(1.5) ;/* Smooth slide effect */
+    background-color: rgba(255, 255, 255, 0); /* Slightly more visible background color on hover */
+}
