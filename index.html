@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vTERM ATC Simulator | Advanced Air Traffic Control Radar Simulator</title>
+    <meta name="description" content="Experience ultimate control with vTERM ATC Simulator. Command a fictional airport, navigate realistic scenarios, and use advanced simulation tools. Learn more about the 27/09 runway layout and STARS scope interface.">
+    <link rel="icon" href="src/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "vTERM ATC Simulator",
+      "description": "Your ultimate ATC radar simulator with a 27/09 runway layout and STARS scope interface.",
+      "brand": {
+        "@type": "Brand",
+        "name": "vTERM"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://store.steampowered.com/app/3000860/vTERM_ATC_Simulator/",
+        "priceCurrency": "USD",
+        "price": "13.99"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <div class="navbar" id="navbar">
+                    <a href="index.html" class="hoverItem">Home</a>
+                    <a href="features.html" class="hoverItem">Features</a>
+                    <a href="download.html" class="hoverItem">Download</a>
+                    <a href="contact.html" class="hoverItem">Contact</a>
+                </div>
+            </nav>
+            <a href="https://store.steampowered.com/app/3000860/vTERM_ATC_Simulator/" target="_blank" class="get_started_button">Purchase <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <img src="logos/full_logo.png" alt="vTERM ATC Simulator Logo">
+            <p>Your ultimate ATC radar simulator! Command a fictional airport with a 27/09 runway layout and use the STARS scope interface for precision control.</p>
+            <a href="learnMore.html" target="_parent" class="learn_more_btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2 class="feature-title">Placeholder</h2>
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Realistic Airport Layout</h3>
+                    <p>Experience the unique 27/09 runway layout with realistic air traffic control scenarios.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Advanced Simulation Tools</h3>
+                    <p>Use STARS scope and other advanced tools for precise control and navigation.</p>
+                </div>
+                <div class="feature-card-bottom">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Realistic STARS Depiction</h3>
+                    <p>Explore various scenarios, handle complex flight patterns, and understand the critical role of the STARS display in air travel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="hr">
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <h2 class="feature-title">Screenshots</h2>
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="src/img2.png" alt="Screenshot of vTERM ATC Simulator Feature 1" loading="lazy">
+                    </div>
+                    <!-- Additional carousel slides -->
+                </div>
+                <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="feature-title">What Our Users Say</h2>
+        <div class="container">
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The vTERM ATC Simulator has completely transformed my understanding of air traffic control. It's incredibly realistic and engaging!"</p>
+                    <cite>John Doe</cite>
+                </div>
+                <div class="testimonial-card">
+                    <p>"An excellent tool for both learning and practicing ATC procedures. Highly recommended for aviation enthusiasts."</p>
+                    <cite>Jane Smith</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 vTERM ATC Simulator. All rights reserved.</p>
+            <div class="socials">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+    
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+    
+            currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+    
+            document.querySelector('.carousel-wrapper').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
